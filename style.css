@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    background-image: url('indexBackground.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    /* DODAJ BOTTOM PADDING (VELICINE FOOTER VISINE) ZBOG FOOTERA DA NE BI PRELAZIO */
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+#wholePageDiv{
+    width: 70%;
+    margin: auto;
+    
+}
+
+nav{
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Dugmici za pocetnu i za username update */
+nav>button{
+    width: 15%;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #E5E5E5;
+    background: #298BD1;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-top: 48px;
+    /* float: right; */
+    /* clear: both; */
+    /* right: 0; */
+}
+
+/* 2ND SECTION */
+
+section{
+    width: 100%;
+    min-height: calc(100vh - 93px - 18px);
+    position: relative;
+}
+
+#rightDiv{
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    resize: vertical;
+    right: 0;
+    float: right;
+    color: #E5E5E5;
+}
+
+#rightDiv h2{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#rightDiv p{
+    font-size: 18px;
+}
+
+#introSectionDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    /* min-height: calc(100vh - 93px); */
+}
+
+#globusImageDiv{
+    width: 1%;
+}
+/* #globusImageDiv img{
+    width: 50%;
+} */
+
+#introDiv{
+    width: 50%;
+    color: #E5E5E5;
+    /* float: right; */
+    text-align: left;
+    right: 0;
+    padding-left: auto;
+    margin: auto 0;
+
+    
+}
+
+#introDiv h2{
+    font-weight: bold;
+    font-size: 40px;
+    /* float: right; */
+}
+
+#introDiv p{
+    font-size: 18px;
+    /* float: right; */
+}
+
+#buttonStartGame{
+    width: 80%;
+    padding: 10px 0;
+    background-color: #298BD1;
+    border-radius: 11px;
+    border: none;
+    font-weight: 500;
+    font-size: 34px;
+    color: #E5E5E5;
+    margin: 10px 0;
+}
+
+#buttonAddTerm{
+    width: 39%;
+    padding: 10px 0;
+    background-color: #23C5ED;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    color: #E5E5E5;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    margin-right: 1%;
+}
+#buttonHallOfFame{
+    width: 39%;
+    padding: 10px 0;
+    background-color: #D2C122;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    color: #E5E5E5;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+    /* margin-left: 1%; */
+}
+
+
+footer{
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #E5E5E5;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* MODAL STYLE */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+     /*Location of the box */
+    padding-top: calc((100vh - 582px) * 0.5);
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ 
+    /* Ovde ne moze border radius jer se ovo ddnosi na sve sto je iza modeula */
+}
+  
+.modalBackgroundOpacity{
+    background-color: rgba(0,0,0,0.4);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    margin: auto;
+    padding: 20px; /* I put padding for modal content without X for closing*/
+}
+  /* Modal Content */
+.modalStartGame-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    /* border: 1px solid #888; */
+    /* width: 35%;
+    height: 70vh; */
+    width: 533px;
+    height: 586px;
+    text-align: center;
+    position: relative;
+    /* border: none; */
+    border-radius: 14px;
+    background: url('./img/backgrounds/playgameBackground.png') no-repeat center center;
+    background-size: cover;
+    
+}
+
+.modalStartGame-content > h2{
+    color: #E5E5E5;
+    font-size: 44px;
+    font-weight: 500;
+    padding-top: 100px;
+    /* margin-top: 50px; */
+}
+
+.modalStartGame-content img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px; /* to keep proportions */
+    height: auto;
+    margin-bottom: 50px;
+    margin: auto auto 0; /* position to bottom and center */
+    
+}
+
+  
+/* The Close Button */
+.close {
+    color: rgba(255, 0, 0, 0.5);
+    /* float: right; */
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 30px;
+
+    position: absolute;
+    right: 0;
+}
+  
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#buttonVsComputer,
+#buttonVsPlayer{
+    /* width: 70%; */
+    width: 435px;
+    height: 79px;
+
+    margin: 10px;
+    /* padding: 50px; */
+    border-radius: 14px;
+    cursor: pointer;
+    border: none;
+    color: #E5E5E5;
+    font-weight: 500;
+    font-size: 26px;
+      
+}
+
+#buttonVsComputer{
+    background-color: #23A274;
+}
+
+#buttonVsPlayer{
+    background-color: #298BD1;
+}
+
+
+/* MODAL UPDATE USERNAME */
+
+.modalUsername-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    /* border: 1px solid #888; */
+    /* width: 35%;
+    height: 70vh; */
+    width: 533px;
+    height: 586px;
+    text-align: center;
+    position: relative;
+    /* border: none; */
+    border-radius: 14px;
+    background: url('./img/backgrounds/usernameBackground.png') no-repeat center center;
+    background-size: cover;
+
+}
+
+.modalUsername-content h2{
+    font-weight: 500;
+    font-size: 48px;
+    color: #E5E5E5;
+    padding-top: 153px;
+}
+
+#inputUsername{
+    width: 459px;
+    height: 77px;
+
+    background: #E5E5E5;
+    border-radius: 14px;
+    
+    margin-top: 39px;
+    font-size: 48px;
+
+    border: none;
+}
+
+#inputUsername:focus{
+    outline: none;
+    padding: 0 10px;
+}
+
+#buttonUpdateUsername {
+    width: 265px;
+    height: 58px;
+
+    background: #23A274;
+    color: #E5E5E5;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
+
+    font-weight: 500;
+    font-size: 24px;
+
+    margin-top: 47px;
+}
+#usernameError{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(216, 0, 0);
+}

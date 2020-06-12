@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wholePageDiv">
+        <nav>
+            <!-- <button id="buttonHome">Pocetna</button> -->
+            <!-- SLIKA ZA USER -->
+            <button id="buttonLogin">Prijava</button>
+        </nav>
+
+        <section>
+            <div id="rightDiv">
+                <h2>Zanimljiva Geografija</h2>
+                <p>Društvena igra za jednog ili više igrača. <br>
+                    Cilj igre je da se na osnovu nasumičnog izabranog <br>
+                    slova nabroji što više geografskih pojmova.
+                </p>
+                <button id="buttonStartGame">POKRENI IGRU</button>
+                <br>
+                <button id="buttonAddTerm">DODAJ POJAM</button>
+                <button id="buttonHallOfFame">HALL OF FAME</button>
+            </div>
+        </section>
+
+
+        <!-- <div id="introSectionDiv">
+            
+            <div id="introDiv">
+                <h2>Zanimljiva Geografija</h2>
+                <p>Društvena igra za jednog ili više igrača. <br>
+                    Cilj igre je da se na osnovu nasumičnog izabranog <br>
+                    slova nabroji što više geografskih pojmova.
+                </p>
+                <button id="buttonStartGame">POKRENI IGRU</button>
+                <br>
+                <button id="buttonRules">PRAVILA</button>
+                <button id="buttonHallOfFame">HALL OF FAME</button>
+            </div>
+        </div> -->
+    </div>
+    <footer>
+        <p>&copy; 2020 developed by Mida, designed by Vuksa, powered by ITBootcamp</p>
+    </footer>
+
+
+    <!-- MODALS -->
+
+    <!-- The Modal -->
+    <div id="modalStartGame" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalStartGame-content">
+            <span class="close">&times;</span>
+            <!-- <div class="modalBackgroundOpacity"> -->
+            <h2>
+                IZABERI<br>
+                PROTIVNIKA
+            </h2>
+            <button id="buttonVsComputer">PROTIV KOMPJUTERA</button>
+            <button id="buttonVsPlayer">PROTIV DRUGOG IGRACA</button>
+            <!-- </div> -->
+            <img src="./img/logo/logo.png" alt="">
+        </div>
+    </div>
+
+    <div id="modalUsername" class="modal">
+
+        <!-- Modal content -->
+        <div class="modalUsername-content">
+            <span class="close" id="closeUsername">&times;</span>
+            <!-- <div class="modalBackgroundOpacity"> -->
+            <h2>
+                KORISNICKO IME
+            </h2>
+            <input type="text" name="" id="inputUsername" autocomplete="off">
+            <button id="buttonUpdateUsername">POTVRDI</button>
+            <p id="usernameError"></p>
+            <!-- </div> -->
+            <!-- <img src="./img/logo/logo.png" alt=""> -->
+        </div>
+    </div>
+
+    <script src="./script.js" async defer></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
