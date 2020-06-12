@@ -61,7 +61,7 @@
 
 
     <!-- MODALS -->
-
+    
     <!-- The Modal -->
     <div id="modalStartGame" class="modal">
 
@@ -81,19 +81,40 @@
     </div>
 
     <div id="modalUsername" class="modal">
-
         <!-- Modal content -->
         <div class="modalUsername-content">
             <span class="close" id="closeUsername">&times;</span>
-            <!-- <div class="modalBackgroundOpacity"> -->
             <h2>
                 KORISNICKO IME
             </h2>
             <input type="text" name="" id="inputUsername" autocomplete="off">
             <button id="buttonUpdateUsername">POTVRDI</button>
             <p id="usernameError"></p>
-            <!-- </div> -->
-            <!-- <img src="./img/logo/logo.png" alt=""> -->
+        </div>
+    </div>
+        
+    <div id="modalAddTerm" class="modalAddTermBackground">
+        <!-- Modal content -->
+        <div class="modalAddTerm-content">
+            <span class="close" id="closeAddTerm">&times;</span>
+            <h2>
+                DODAVANJE NOVOG POJMA
+            </h2>
+            <p>Ovde mozete predloziti novi pojam za dopunu i unos u bazu podataka, a taj pojam ce nakon vaseg unosa moderator odobriti.</p>
+            <form action="" id="formAddTerm">
+                <select name="" id="selectCategoryAddTerm">
+                    <option value="država">Država</option>
+                    <option value="grad">Grad</option>
+                    <option value="reka">Reka</option>
+                    <option value="planina">Planina</option>
+                    <option value="životinja">Životinja</option>
+                    <option value="biljka">Biljka</option>
+                    <option value="predmet">Predmet</option>
+                </select>
+                <input type="text" name="" id="inputTerm" autocomplete="off" placeholder="Unesi novi pojam...">
+                <input type="submit" value="POTVRDI" id="submitAddTerm">
+            </form>
+            <p id="usernameError"></p>
         </div>
     </div>
 
