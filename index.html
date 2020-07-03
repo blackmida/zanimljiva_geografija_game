@@ -61,8 +61,8 @@
 
 
     <!-- MODALS -->
-    
-    <!-- The Modal -->
+
+    <!-- The Modal Start Game -->
     <div id="modalStartGame" class="modal">
 
         <!-- Modal content -->
@@ -80,6 +80,7 @@
         </div>
     </div>
 
+    <!-- The Modal enter Username -->
     <div id="modalUsername" class="modal">
         <!-- Modal content -->
         <div class="modalUsername-content">
@@ -92,7 +93,8 @@
             <p id="usernameError"></p>
         </div>
     </div>
-        
+
+    <!-- The Modal for adding term in database-->
     <div id="modalAddTerm" class="modalAddTermBackground">
         <!-- Modal content -->
         <div class="modalAddTerm-content">
@@ -100,9 +102,11 @@
             <h2>
                 DODAVANJE NOVOG POJMA
             </h2>
-            <p>Ovde mozete predloziti novi pojam za dopunu i unos u bazu podataka, a taj pojam ce nakon vaseg unosa moderator odobriti.</p>
+            <p>Ovde mozete predloziti novi pojam za dopunu i unos u bazu podataka, a taj pojam ce nakon vaseg unosa
+                moderator odobriti.</p>
             <form action="" id="formAddTerm">
                 <select name="" id="selectCategoryAddTerm">
+                    <option value="" disabled selected class="selectedCategoryHidden">Izaberi kategoriju..</option>
                     <option value="država">Država</option>
                     <option value="grad">Grad</option>
                     <option value="reka">Reka</option>
@@ -118,8 +122,38 @@
         </div>
     </div>
 
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8epcvIZaLSUhJdvrmlw2cQy7UWZWjrbQ",
+            authDomain: "zgeografija-e83a9.firebaseapp.com",
+            databaseURL: "https://zgeografija-e83a9.firebaseio.com",
+            projectId: "zgeografija-e83a9",
+            storageBucket: "zgeografija-e83a9.appspot.com",
+            messagingSenderId: "106317006761",
+            appId: "1:106317006761:web:55e0a7e771f43de9c7a6b8",
+            measurementId: "G-8W5SJHJEC6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+        let db = firebase.firestore();
+    </script>
+
+
     <script src="./script.js" async defer></script>
-    <script src="./app.js"></script>
+    <script src="./app.js" type="module"></script>
 </body>
 
 </html>

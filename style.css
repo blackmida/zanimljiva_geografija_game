@@ -359,20 +359,30 @@ footer{
 }
 
 #modalAddTerm{
-    padding-top: 0;
+    /* padding-top: 0; */
+    background-color: #404066;
+    width: 49%;
+    height: calc(100vh - 18px);
 }
 
 .modalAddTerm-content {
     background-color: #fefefe;
     /* margin: auto; */
-    padding: 0;
-    padding-bottom: 25px;
+    /* padding: 0; */
+
+    /* padding-bottom: 25px; */
+
     /* border: 1px solid #888; */
     /* width: 35%;
     height: 70vh; */
     /* width: 533px; */
-    width: 48%;
-    height: calc(100vh - 18px);
+    
+    /* width: 48%; */
+    /* height: calc(100vh - 18px); */
+
+    width: 533px;
+    height: 586px;
+    /* border: solid 5px black; */
     /* height: 586px; */
     text-align: center;
     position: relative;
@@ -381,14 +391,18 @@ footer{
     background-color: #404066;
     /* background: url('./img/backgrounds/usernameBackground.png') no-repeat center center; */
     background-size: cover;
-
+    margin: auto;
+}
+#closeAddTerm{
+    margin: 10px 10px 0 0;
 }
 
 .modalAddTerm-content h2{
+    
     font-weight: 500;
     font-size: 33px;
     color: #E5E5E5;
-    padding-top: 50px;
+    padding-top: 55px;
 }
 
 .modalAddTerm-content p{
@@ -431,7 +445,24 @@ footer{
 }
 
 #selectCategoryAddTerm option{
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    font-weight: 500;
+    font-size: 24px;
+    color: #404066;
+    border: none;
+    outline: none;
+    line-height: 36px;
+}
+
+#selectCategoryAddTerm option:hover{
+    border: none;
+    outline: none;
+    color: #E5E5E5;
+    background-color: #404066;
+}
+
+.selectedCategoryHidden{
+    display: none;
 }
 
 #submitAddTerm{
