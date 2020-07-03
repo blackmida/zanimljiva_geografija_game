@@ -4,6 +4,8 @@ var modalStartGame = document.getElementById("modalStartGame");
 var modalUsername = document.querySelector('#modalUsername');
 var modalAddTerm = document.querySelector('#modalAddTerm');
 
+var section = document.querySelector('body');
+
 // Get the button that opens the modal
 var buttonStartGame = document.getElementById("buttonStartGame");
 var buttonLogin = document.querySelector('#buttonLogin');
@@ -41,7 +43,7 @@ closeAddTerm.onclick = function(){
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modalStartGame || event.target == modalUsername || event.target == modalAddTerm) {
+  if (event.target == modalStartGame || event.target == modalUsername || event.target == modalAddTerm || event.target == section) {
     modalStartGame.style.display = "none";
     modalUsername.style.display = "none";
     modalAddTerm.style.display = "none";
