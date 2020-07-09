@@ -131,6 +131,14 @@ section{
     margin: 10px 0;
 }
 
+
+#buttonLogin:focus,
+#buttonStartGame:focus,
+#buttonAddTerm:focus,
+#buttonHallOfFame:focus{
+    outline: none;
+}
+
 #buttonAddTerm{
     width: 39%;
     padding: 10px 0;
@@ -477,4 +485,5 @@ footer{
     color: #E5E5E5;
     text-align: center;
     margin-top: 15px;
+    cursor: pointer;
 }
