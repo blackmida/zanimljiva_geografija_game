@@ -10,6 +10,7 @@ var section = document.querySelector('body');
 var buttonStartGame = document.getElementById("buttonStartGame");
 var buttonLogin = document.querySelector('#buttonLogin');
 var buttonAddTerm = document.querySelector('#buttonAddTerm');
+var buttonHallOfFame = document.querySelector('#buttonHallOfFame');
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -28,6 +29,10 @@ buttonLogin.onclick = function(){
 
 buttonAddTerm.addEventListener('click', () => {
   modalAddTerm.style.display = 'block';
+});
+
+buttonHallOfFame.addEventListener('click', () => {
+  location.href='hallOfFame.html';
 })
 
 // When the user clicks on <span> (x), close the modal
