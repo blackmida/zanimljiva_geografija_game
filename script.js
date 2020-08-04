@@ -28,7 +28,13 @@ buttonLogin.onclick = function(){
 }
 
 buttonAddTerm.addEventListener('click', () => {
-  modalAddTerm.style.display = 'block';
+  if(localStorage.usernameLS){
+    modalAddTerm.style.display = 'block';
+  }
+  else{
+    alert('Morate se prvo priajviti!')
+  }
+  
 });
 
 buttonHallOfFame.addEventListener('click', () => {
