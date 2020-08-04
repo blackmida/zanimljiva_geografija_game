@@ -17,6 +17,8 @@ let usernameModal = document.querySelector('#modalUsername');
 const usernameRegexp = /^\S*$/;
 
 
+let buttonHallOfFame = document.querySelector('#buttonHallOfFame');
+
 formUpdateUsername.addEventListener('submit', (e) => {
     e.preventDefault();
     let username = inputUsername.value;
