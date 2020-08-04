@@ -192,20 +192,6 @@ footer{
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ 
     /* Ovde ne moze border radius jer se ovo ddnosi na sve sto je iza modeula */
 }
-
-.modalAddTermBackground {
-    display: none; /*Hidden by default*/
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-     /*Location of the box */
-    padding-top: calc((100vh - 582px) * 0.5);
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    
-}
   
 .modalBackgroundOpacity{
     background-color: rgba(0,0,0,0.4);
@@ -364,6 +350,30 @@ footer{
     font-size: 20px;
     margin-top: 20px;
     color: rgb(216, 0, 0);
+}
+
+
+
+.modalAddTermBackground {
+    display: none; /*Hidden by default*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+     /*Location of the box */
+    padding-top: calc((100vh - 582px) * 0.5);
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    animation: left-to-right 700ms ease-out;
+}
+@-webkit-keyframes left-to-right{
+    from{left:-100%}
+    to{left:0}
+}
+@keyframes left-to-right{
+    from{left:-100%}
+    to{left:0}
 }
 
 #modalAddTerm{
