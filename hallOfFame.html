@@ -2,81 +2,111 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>HallOfFame</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <link rel="stylesheet" href="./hallOfFame.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HallOfFame</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./hallOfFame.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container">
-            <h1>Hall of Fame</h1>
-            <div class="resultsDiv">
-                <table class="leftTable">
-                    <caption>Top 5 igraca po broju unosa</caption>
-                    <tr>
-                        <td class="tdUserName">DjokaPeric</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td class="tdUserName">BlackMida</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td class="tdUserName">Isnogud</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td class="tdUserName">Voja</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td class="tdUserName">Jankeza</td>
-                        <td>3</td>
-                    </tr>
-                </table>
+    <div class="container">
+        <h1>Hall of Fame</h1>
+        <div class="resultsDiv">
+            <table class="leftTable">
+                <caption>Top 5 igraca po broju unosa</caption>
+                <tr>
+                    <td class="tdUserName"></td>
+                    <td class="tdTerms"></td>
+                </tr>
+                <tr>
+                    <td class="tdUserName"></td>
+                    <td class="tdTerms"></td>
+                </tr>
+                <tr>
+                    <td class="tdUserName"></td>
+                    <td class="tdTerms"></td>
+                </tr>
+                <tr>
+                    <td class="tdUserName"></td>
+                    <td class="tdTerms"></td>
+                </tr>
+                <tr>
+                    <td class="tdUserName"></td>
+                    <td class="tdTerms"></td>
+                </tr>
+            </table>
 
-                <table class="rightTable">
-                    <caption>Top 5 igraca po broju poena</caption>
-                    <tr>
-                        <td>DjokaPeric</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>BlackMida</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>Isnogud</td>
-                        <td>15</td>
-                    </tr>
-                    <tr>
-                        <td>Voja</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Jankeza</td>
-                        <td>3</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <button id="homeButton" onClick="location.href='index.html'">Pocetna</button>
+            <table class="rightTable">
+                <caption>Top 5 igraca po broju poena</caption>
+                <tr>
+                    <td>DjokaPeric</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>BlackMida</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Isnogud</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Voja</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Jankeza</td>
+                    <td>3</td>
+                </tr>
+            </table>
         </div>
-        <footer>
-            <p>&copy; 2020 developed by Mida, designed by Vuksa, powered by ITBootcamp</p>
-        </footer>
-        <script>
-            
-        
-        </script>
-    </body>
+
+        <button id="homeButton" onClick="location.href='index.html'">Pocetna</button>
+    </div>
+    <footer>
+        <p>&copy; 2020 developed by Mida, designed by Vuksa, powered by ITBootcamp</p>
+    </footer>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8epcvIZaLSUhJdvrmlw2cQy7UWZWjrbQ",
+            authDomain: "zgeografija-e83a9.firebaseapp.com",
+            databaseURL: "https://zgeografija-e83a9.firebaseio.com",
+            projectId: "zgeografija-e83a9",
+            storageBucket: "zgeografija-e83a9.appspot.com",
+            messagingSenderId: "106317006761",
+            appId: "1:106317006761:web:55e0a7e771f43de9c7a6b8",
+            measurementId: "G-8W5SJHJEC6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+        let db = firebase.firestore();
+    </script>
+
+    <script src="./scripts/hallOfFame.js" type="module"></script>
+</body>
+
 </html>
