@@ -44,16 +44,30 @@ export class Term {
         return response;
     }
 
+    topFiveUsersByTerms(callback) {
+        let array = [];
+        db.collection('pojmovi')
+            .orderBy('korisnik')
+            .get()
+            .then(snapshot => {
+                snapshot.forEach(doc => {
+                    array.push(doc.data().korisnik);
+                });
+                callback(array);
+            })
+            .catch(err => console.log('Can not create array of useres', err));
+    }
+
     checkTermInDatabase() {
         this.pojmovi
             .where('kategorija', '==', this.category)
             .where('pojam', '==', this.term)
             .get()
             .then(snapshot => {
-                if(snapshot.docs.length == 0){
+                if (snapshot.docs.length == 0) {
                     this.addTermInDatabase();
                 }
-                else{
+                else {
                     alert('Pojam vec postoji u bazi!')
                 }
             })
